@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        box-sizing: border-box;
+    }
+
+    /* Your CSS styles can go here */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        font-size: 22px;
+        /* Increase font size to 19px */
+    }
+
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+
+    nav ul {
+        list-style-type: none;
+        display: flex;
+        gap: 20px;
+    }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        background-color: #555;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 0 20px;
+        text-align: center;
+        /* Align text to the left */
+    }
+
+    /* Additional styles can be added as needed */
+    .hero-images {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 50px;
+        /* Adjust the margin as needed */
+    }
+
+    .hero-images img {
+        width: 284px;
+        height: 285px;
+        border-radius: 100%;
+        /* Make the images circular */
+        border: 3px solid #fff;
+        /* Add a border */
+        box-shadow: 0 0 100px rgba(0, 0, 0, 0.4);
+        /* Add a shadow */
+        transition: all 0.3s ease;
+        /* Smooth transition for the hover effect */
+        position: relative;
+    }
+
+    .hero-images img:hover {
+        transform: scale(1.1);
+        /* Zoom in on hover */
+        border-radius: 10px;
+        /* Change border-radius for rectangle shape */
+        width: 400px;
+        /* Adjust the size of the images */
+        height: 400px;
+    }
+
+    .hero-images img::after {
+        content: attr(alt);
+        /* Use alt text as content */
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        /* Semi-transparent black background */
+        color: #fff;
+        padding: 5px 0;
+        text-align: center;
+    }
+
+    .rewards {
+        display: flex;
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+
+    .rewards {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+
+    .rewards {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+
+    .reward-info {
+        margin-left: 3rem;
+        margin-right: 3rem;
+        text-align: center;
+    }
+
+    .nav-search {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-search:hover {
+        transform: scale(1.2);
+        transition: 1s;
+    }
+
+    .search-input {
+        height: 44px;
+        width: 31rem;
+        font-size: 1rem;
+        outline: none;
+        /* border: none; */
+        border: 1px solid black;
+        border-top-left-radius: 23px;
+        border-bottom-left-radius: 23px;
+        text-align: center;
+    }
+
+    .search-icon {
+        height: 44px;
+        width: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        color: #0f1111;
+        background-color: white;
+        border-top-right-radius: 23px;
+        border-bottom-right-radius: 23px;
+        border: 1px solid black;
+    }
+</style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Userprofileshow.jsp">User Profile</a></li>
+                <li><a href="UserLogout.jsp">Logout</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <!-- Your homepage content goes here -->
+        <div class="hero-content">
+            <h1>Welcome to E-Waste- Locator</h1>
+
+        </div>
+        <div class="nav-search">
+            <input placeholder="Search for e-waste facilities" class="search-input">
+            <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        </div>
+        <div class="hero-images">
+            <img src="imghome1.jpg" alt="Reward">
+            <img src="imghome2.jfif" alt="Referral">
+            <img src="imghome3.jfif" alt="Offer">
+        </div>
+    </div>
+
+    <!-- Map Section -->
+    <section id="map-container">
+        <div id="map"></div>
+    </section>
+
+    <!-- Rewards Section -->
+    <section class="rewards">
+        <div class="reward-info">
+            <img src="reward_icon.png" alt="Reward">
+            <h3>Rewards</h3>
+            <p>Get rewarded for your actions!</p>
+        </div>
+        <div class="reward-info">
+            <img src="refer_icon.png" alt="Refer">
+            <h3>Refer & Earn</h3>
+            <p>Refer friends and earn bonuses!</p>
+        </div>
+        <div class="reward-info">
+            <img src="offer_icon.png" alt="Offer">
+            <h3>Special Offers</h3>
+            <p>Exclusive offers just for you!</p>
+        </div </section>
+
+</body>
+
+</html>
